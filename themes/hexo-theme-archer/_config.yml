@@ -2,13 +2,13 @@
 # avatar
 avatar: /avatar/cat.png
 # author name
-author: Longlongyu
+author: Minami
 # signature
 signature: Do one thing at a time, and do well.
 # SNS
 social:
-  email: Longlongyuu@foxmail.com
-  github: //github.com/Longlongyu
+  email: minamisan@126.com
+  github: //github.com/MINAMISAMA/
   # wechat and qq should be a path of qr-code image
   wechat: 
   qq: /assets/qrcode_qq.jpg
@@ -35,9 +35,9 @@ about:
 
 # ========== Site ========== #
 # title of the site
-SEO_title: Longlongyu的个人站.
+SEO_title: Minami的个人站.
 # main title
-main_title: Longlongyu的个人站.
+main_title: Minami的个人站.
 # subtitle
 subtitle: 欢迎来到我的个人站！
 # site haeder image
