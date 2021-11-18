@@ -94,7 +94,7 @@
 			<div class="social">
 				
 					
-						<a class="github" href="#" 
+						<a class="github" href="https://github.com/MINAMISAMA/MINAMISAMA.github.io" 
 												title="GitHub" target="_blank"><i class="icon-github"></i></a>
 					
 				
@@ -109,7 +109,7 @@
 					
 				
 					
-						<a class="weixin" href="/img/weixin_.png" 
+						<a class="weixin" href="/img/weixin.jpg" 
 												title="微信" target="_blank"><i class="icon-weixin"></i></a>
 					
 				
@@ -161,7 +161,7 @@
 					
 						
 						<a class="github" target="_blank" 
-							href="#" title="GitHub"><i class="icon-github"></i></a>
+							href="https://github.com/MINAMISAMA/MINAMISAMA.github.io" title="GitHub"><i class="icon-github"></i></a>
 						
 					
 						
@@ -176,7 +176,7 @@
 					
 						
 						<a class="weixin" target="_blank" 
-							href="/img/weixin_.png" title="微信"><i class="icon-weixin"></i></a>
+							href="/img/weixin.jpg" title="微信"><i class="icon-weixin"></i></a>
 						
 					
 						
@@ -210,7 +210,7 @@
             
 
   
-    <article id="post-Hexo-个人博客搭建" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Hexo-个人博客搭建(1)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -218,7 +218,7 @@
   
     <h1 itemprop="name">
 	
-	  <a class="article-title" href="/2021/11/18/Hexo-%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" target="_blank">Hexo 个人博客搭建</a>
+	  <a class="article-title" href="/2021/11/18/Hexo-%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA(1)/" target="_blank">Hexo 个人博客搭建（1）</a>
   
     </h1>
   
@@ -226,7 +226,7 @@
 
   
   
-<a href="/2021/11/18/Hexo-%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" class="archive-article-date">
+<a href="/2021/11/18/Hexo-%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA(1)/" class="archive-article-date">
         <time datetime="2021-11-18T09:22:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-11-18</time>
 </a>
 
@@ -241,8 +241,41 @@
     
     <!-- # Hexo 个人博客搭建 -->
 <hr>
-<p>前言<br>hexo的官网时<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn">https://hexo.io/zh-cn</a><br>官网中有详细的搭建方法，但是在自己的电脑实际使用中会有坑，所以记录一下自己的搭建过程。</p>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>hexo的官网时<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn">https://hexo.io/zh-cn</a><br>官网中有详细的搭建方法，但是在自己的电脑实际使用中会有坑，所以记录一下自己的搭建过程。</p>
 <hr>
+<h1 id="事前准备"><a href="#事前准备" class="headerlink" title="事前准备"></a>事前准备</h1><h2 id="安装nodejs"><a href="#安装nodejs" class="headerlink" title="安装nodejs"></a>安装nodejs</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install nodejs</span><br></pre></td></tr></table></figure>
+</br>
+
+<h2 id="安装npm"><a href="#安装npm" class="headerlink" title="安装npm"></a>安装npm</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install npm</span><br></pre></td></tr></table></figure>
+
+<p>npm安装完成后需要执行以下命令用于更新包</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo npm i</span><br></pre></td></tr></table></figure>
+</br>
+
+<h2 id="安装git和gitcore"><a href="#安装git和gitcore" class="headerlink" title="安装git和gitcore"></a>安装git和gitcore</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install git</span><br><span class="line">$ sudo apt-get install git-core</span><br></pre></td></tr></table></figure>
+</br>
+## 安装hexo
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo npm install -g hexo-cli</span><br><span class="line">$ sudo npm install -g hexo </span><br></pre></td></tr></table></figure>
+
+<h1 id="hexo-基础使用"><a href="#hexo-基础使用" class="headerlink" title="hexo 基础使用"></a>hexo 基础使用</h1><h2 id="建站"><a href="#建站" class="headerlink" title="建站"></a>建站</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init &lt;folder&gt;    #创建或初始化你的博客项目，存放hexo博客的源码，文件夹的名称可以自定义</span><br><span class="line">$ cd &lt;folder&gt;           #需要注意后面的指令都需要在项目目录下执行</span><br><span class="line">$ npm install           #npm会根据你在package.json中对各种依赖的定义去安装这些依赖</span><br><span class="line">$ hexo g                #生成静态网页文件</span><br><span class="line">$ hexo server           #建立本地的网站</span><br></pre></td></tr></table></figure>
+<p>完成了以上的命令后就可以在浏览器中登录localhost:4000对博客进行本地调试了<br></br></p>
+<h2 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new &quot;&lt;name&gt;&quot;</span><br></pre></td></tr></table></figure>
+<p>新建了文章后，可以在项目的source/_post目录下看到一个新的文件”name.md”。打开可以看到已经自动生成了header信息，例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: Hexo 个人博客搭建</span><br><span class="line">tags:</span><br><span class="line">  - Hexo</span><br><span class="line">  - Github</span><br><span class="line">  - 教程</span><br><span class="line">categories:</span><br><span class="line">  - 分类</span><br><span class="line">date: 2021-11-18 17:22:43</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<p>header信息是文章的属性，采用统一的yaml格式，用三条短横线分隔。</br><br>|   属性   |  描述   |  默认值   |<br>| ——  | —— | —— |<br>| layout | layout类型 | post或者page |<br>| title | 文章标题 |  |<br>| date | 创建日期 | 文件的创建日期 |<br>| updated | 修改日期 | 文件的修改日期 |<br>| comments | 是否开启评论 | true |<br>| tags | 标签 |  |<br>| categories | 分类 |  |<br>| permalink | url中的名字 | 文件名 |</p>
+<p>我们可以在下面开始编辑文章正文。正文是使用markdown格式，文章编辑时建议使用vs code或其他支持markdown实时查看的工具。</p>
+<h2 id="草稿"><a href="#草稿" class="headerlink" title="草稿"></a>草稿</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new draft &quot;&lt;name&gt;&quot;</span><br></pre></td></tr></table></figure>
+<p>新建草稿后会在source/_draft目录下生成一个name.md文件。这个文件一般是不在网页上显示，链接也无法访问的。<br>也就是说如果你想把某一篇文章移除显示，又不舍得删除，可以把它移动到_drafts目录之中。<br>如果你希望强行预览草稿，需要修改项目根目录的_config文件：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">render_drafts: true</span><br></pre></td></tr></table></figure>
+<p>或者在本地网址中浏览：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server --drafts</span><br></pre></td></tr></table></figure>
+
+<p>可以通过以下命令将草稿变成文章或者网页：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo publish [layout] &lt;filename&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+
 
     
 
@@ -279,7 +312,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/分类//" class="article-tag-list-link color3">分类</a>
+        			<a href="/categories/Hexo//" class="article-tag-list-link color5">Hexo</a>
         		</li>
       		
 		</ul>
@@ -288,7 +321,7 @@
 
     
     <p class="article-more-link">
-      <a class="article-more-a" href="/2021/11/18/Hexo-%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">展开全文 >></a>
+      <a class="article-more-a" href="/2021/11/18/Hexo-%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA(1)/">展开全文 >></a>
     </p>
     
 
@@ -612,7 +645,7 @@
     	<section class="tools-section tools-section-me" q-show="aboutme">
         
           
-  	  		<div class="aboutme-wrap" id="aboutme">主要涉及技术：<br>ROS、Autoware、Apollo、自动驾驶开发与技术分享<br>Linux、OpenCV、安卓开发、3D建模<br><br>目标是成为游戏开发者&音乐家的社畜<br><br>邮箱：minamisan@126.com<br><br>可能会有音乐以及咖啡相关...<br><br>争取多更新一点<br>喵喵~~</div>
+  	  		<div class="aboutme-wrap" id="aboutme">主要涉及技术：<br>ROS、Autoware、Apollo<br>Linux、OpenCV、安卓开发、3D建模<br><br>目标是成为游戏开发者&音乐家的社畜<br>可能会有音乐以及咖啡相关...<br><br>争取多更新一点<br>邮箱：minamisan@126.com<br><br><br>喵喵~~</div>
   	  	
     	</section>
     
