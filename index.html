@@ -5,7 +5,7 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="http://minami.com">
+  <link rel="dns-prefetch" href="https://minamisama.github.io">
   <title>Minami</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -16,7 +16,7 @@
   
   <meta property="og:type" content="website">
 <meta property="og:title" content="Minami">
-<meta property="og:url" content="http://minami.com/index.html">
+<meta property="og:url" content="https://minamisama.github.io/index.html">
 <meta property="og:site_name" content="Minami">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="Minami">
@@ -210,6 +210,122 @@
             
 
   
+    <article id="post-Hexo-个人博客搭建(2)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2021/11/19/Hexo-%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA(2)/" target="_blank">Hexo-个人博客搭建（2）</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2021/11/19/Hexo-%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA(2)/" class="archive-article-date">
+        <time datetime="2021-11-18T18:23:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-11-19</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p>本篇记录如何将Hexo博客部署到github上，然后可以通过浏览器直接访问你的博客。Hexo搭建的系列：<br><a href="https://minamisama.github.io/2021/11/18/Hexo-%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA(1)/">Hexo 个人博客搭建（1）</a><br><a href="/">Hexo 个人博客搭建（2）</a></p>
+<h1 id="git安装和配置"><a href="#git安装和配置" class="headerlink" title="git安装和配置"></a>git安装和配置</h1><p>在进行git的安装和配置之前，我们需要有一个git账号。没有github账号可以在<a target="_blank" rel="noopener" href="https://github.com/signup">GitHub注册</a>中注册一个账号。</p>
+<h2 id="安装git和gitcore"><a href="#安装git和gitcore" class="headerlink" title="安装git和gitcore"></a>安装git和gitcore</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install git</span><br><span class="line">$ sudo apt-get install git-core</span><br></pre></td></tr></table></figure>
+<br>
+
+<h2 id="设置本机git账号"><a href="#设置本机git账号" class="headerlink" title="设置本机git账号"></a>设置本机git账号</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;yourname&quot;</span><br><span class="line">git config --global user.email &quot;youremail&quot;   #注册github账户使用的邮箱</span><br></pre></td></tr></table></figure>
+
+<h2 id="生成密钥"><a href="#生成密钥" class="headerlink" title="生成密钥"></a>生成密钥</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;youremail&quot;</span><br></pre></td></tr></table></figure>
+<p>执行后生成密钥文件，密钥保存在~/.ssh/目录下,id_rsa文件为你的私钥，id_rsa.pub为你的公钥：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── id_rsa</span><br><span class="line">├── id_rsa.pub</span><br><span class="line">└── known_hosts</span><br></pre></td></tr></table></figure>
+
+<h2 id="设置SSH-keys"><a href="#设置SSH-keys" class="headerlink" title="设置SSH keys"></a>设置SSH keys</h2><p>在github中点击自己的头像，然后点击settings进入设置界面。<br>在左侧找到并点击“SSH and GPG keys”，然后点击右侧的“New SSH key”。</p>
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Github</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">教程</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Hexo//" class="article-tag-list-link color5">Hexo</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2021/11/19/Hexo-%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA(2)/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Hexo-个人博客搭建(1)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -241,7 +357,7 @@
     
     <!-- # Hexo 个人博客搭建 -->
 <hr>
-<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>hexo的官网时<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn">https://hexo.io/zh-cn</a><br>官网中有详细的搭建方法，但是在自己的电脑实际使用中会有坑，所以记录一下自己的搭建过程。</p>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>hexo的官网时<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn">https://hexo.io/zh-cn</a><br>官网中有详细的搭建方法，但是在自己的电脑实际使用中会有坑，所以记录一下自己的搭建过程。<br>本篇主要记录Hexo博客的安装和基础使用指令。Hexo搭建的系列：<br><a href="https://minamisama.github.io/2021/11/18/Hexo-%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA(1)/">Hexo 个人博客搭建（1）</a><br><a href="/">Hexo 个人博客搭建（2）</a></p>
 <hr>
 <h1 id="事前准备"><a href="#事前准备" class="headerlink" title="事前准备"></a>事前准备</h1><h2 id="安装nodejs"><a href="#安装nodejs" class="headerlink" title="安装nodejs"></a>安装nodejs</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install nodejs</span><br></pre></td></tr></table></figure>
 </br>
@@ -262,7 +378,56 @@
 <h2 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new &quot;&lt;name&gt;&quot;</span><br></pre></td></tr></table></figure>
 <p>新建了文章后，可以在项目的source/_post目录下看到一个新的文件”name.md”。打开可以看到已经自动生成了header信息，例如：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: Hexo 个人博客搭建</span><br><span class="line">tags:</span><br><span class="line">  - Hexo</span><br><span class="line">  - Github</span><br><span class="line">  - 教程</span><br><span class="line">categories:</span><br><span class="line">  - 分类</span><br><span class="line">date: 2021-11-18 17:22:43</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-<p>header信息是文章的属性，采用统一的yaml格式，用三条短横线分隔。</br><br>|   属性   |  描述   |  默认值   |<br>| :——  | :—— | :—— |<br>| layout | layout类型 | post或者page |<br>| title | 文章标题 |  |<br>| date | 创建日期 | 文件的创建日期 |<br>| updated | 修改日期 | 文件的修改日期 |<br>| comments | 是否开启评论 | true |<br>| tags | 标签 |  |<br>| categories | 分类 |  |<br>| permalink | url中的名字 | 文件名 |</p>
+<p>header信息是文章的属性，采用统一的yaml格式，用三条短横线分隔。</br></p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>layout</td>
+<td>layout类型</td>
+<td>post或者page</td>
+</tr>
+<tr>
+<td>title</td>
+<td>文章标题</td>
+<td></td>
+</tr>
+<tr>
+<td>date</td>
+<td>创建日期</td>
+<td>文件的创建日期</td>
+</tr>
+<tr>
+<td>updated</td>
+<td>修改日期</td>
+<td>文件的修改日期</td>
+</tr>
+<tr>
+<td>comments</td>
+<td>是否开启评论</td>
+<td>true</td>
+</tr>
+<tr>
+<td>tags  v</td>
+<td>标签</td>
+<td></td>
+</tr>
+<tr>
+<td>categories</td>
+<td>分类</td>
+<td></td>
+</tr>
+<tr>
+<td>permalink</td>
+<td>url中的名字</td>
+<td>文件名</td>
+</tr>
+</tbody></table>
 <p>我们可以在下面开始编辑文章正文。正文是使用markdown格式，文章编辑时建议使用vs code或其他支持markdown实时查看的工具。</p>
 <h2 id="草稿"><a href="#草稿" class="headerlink" title="草稿"></a>草稿</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new draft &quot;&lt;name&gt;&quot;</span><br></pre></td></tr></table></figure>
 <p>新建草稿后会在source/_draft目录下生成一个name.md文件。这个文件一般是不在网页上显示，链接也无法访问的。<br>也就是说如果你想把某一篇文章移除显示，又不舍得删除，可以把它移动到_drafts目录之中。<br>如果你希望强行预览草稿，需要修改项目根目录的_config文件：</p>
@@ -463,7 +628,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2021 <a href="http://minami.com/" target="_blank">Minami</a>
+    		&copy; 2021 <a href="https://minamisama.github.io/" target="_blank">Minami</a>
     	</div>
       	<div class="footer-right">
 			
