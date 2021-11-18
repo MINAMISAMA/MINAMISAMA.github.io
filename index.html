@@ -272,13 +272,14 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b Hexo</span><br></pre></td></tr></table></figure>
 <p>创建一个新的分支“Hexo”<br>然后编辑网站的根目录下的_config.yml文件，将末尾修改为：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">type: git</span><br><span class="line">repo: https://github.com/YourgithubName/YourgithubName.github.io.git</span><br><span class="line">branch: master</span><br></pre></td></tr></table></figure>
-<p>repo中输入你的仓库地址，branch中指定你网址的静态文件存放的位置。<br>branch也可以设置为Hexo，但是这样就需要你将默认分支设置为Hexo，并且源码要上传到master分支。</p>
+<p>repo中输入你的仓库地址，branch中指定你网址的静态文件存放的位置。<br>branch也可以设置为Hexo，但是这样就需要你将默认分支设置为Hexo，并且源码要上传到master分支。<br><br>安装部署命令</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-<p>安装部署命令</p>
+
+
 <p>最后输入以下指令即可完成部署：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
 
-<p>部署完成后可以在浏览器中输入YourgithubName.github.io访问你的博客了。</p>
+<p>部署完成后可以在浏览器中输入YourgithubName.github.io访问你的博客了。<br>enjoy yourself~</p>
 
     
 
