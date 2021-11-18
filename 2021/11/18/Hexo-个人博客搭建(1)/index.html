@@ -18,7 +18,7 @@
 <meta property="og:description" content="前言hexo的官网时https:&#x2F;&#x2F;hexo.io&#x2F;zh-cn官网中有详细的搭建方法，但是在自己的电脑实际使用中会有坑，所以记录一下自己的搭建过程。  事前准备安装nodejs1$ sudo apt-get install nodejs   安装npm1$ sudo apt-get install npm  npm安装完成后需要执行以下命令用于更新包 1$ sudo npm i   安装git">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-11-18T09:22:43.000Z">
-<meta property="article:modified_time" content="2021-11-18T18:09:00.093Z">
+<meta property="article:modified_time" content="2021-11-18T18:22:06.313Z">
 <meta property="article:author" content="Minami">
 <meta property="article:tag" content="Hexo">
 <meta property="article:tag" content="Github">
@@ -243,7 +243,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">639字</span>
+      <span class="post-count">899字</span>
     </span>
   </span>
 
@@ -252,7 +252,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">2分</span>
+      <span class="post-count">3分</span>
     </span>
   </span>
 </div>
@@ -286,7 +286,7 @@
 <h2 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new &quot;&lt;name&gt;&quot;</span><br></pre></td></tr></table></figure>
 <p>新建了文章后，可以在项目的source/_post目录下看到一个新的文件”name.md”。打开可以看到已经自动生成了header信息，例如：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: Hexo 个人博客搭建</span><br><span class="line">tags:</span><br><span class="line">  - Hexo</span><br><span class="line">  - Github</span><br><span class="line">  - 教程</span><br><span class="line">categories:</span><br><span class="line">  - 分类</span><br><span class="line">date: 2021-11-18 17:22:43</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-<p>header信息是文章的属性，采用统一的yaml格式，用三条短横线分隔。</br><br>|   属性   |  描述   |  默认值   |<br>| ——  | —— | —— |<br>| layout | layout类型 | post或者page |<br>| title | 文章标题 |  |<br>| date | 创建日期 | 文件的创建日期 |<br>| updated | 修改日期 | 文件的修改日期 |<br>| comments | 是否开启评论 | true |<br>| tags | 标签 |  |<br>| categories | 分类 |  |<br>| permalink | url中的名字 | 文件名 |</p>
+<p>header信息是文章的属性，采用统一的yaml格式，用三条短横线分隔。</br><br>|   属性   |  描述   |  默认值   |<br>| :——  | :—— | :—— |<br>| layout | layout类型 | post或者page |<br>| title | 文章标题 |  |<br>| date | 创建日期 | 文件的创建日期 |<br>| updated | 修改日期 | 文件的修改日期 |<br>| comments | 是否开启评论 | true |<br>| tags | 标签 |  |<br>| categories | 分类 |  |<br>| permalink | url中的名字 | 文件名 |</p>
 <p>我们可以在下面开始编辑文章正文。正文是使用markdown格式，文章编辑时建议使用vs code或其他支持markdown实时查看的工具。</p>
 <h2 id="草稿"><a href="#草稿" class="headerlink" title="草稿"></a>草稿</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new draft &quot;&lt;name&gt;&quot;</span><br></pre></td></tr></table></figure>
 <p>新建草稿后会在source/_draft目录下生成一个name.md文件。这个文件一般是不在网页上显示，链接也无法访问的。<br>也就是说如果你想把某一篇文章移除显示，又不舍得删除，可以把它移动到_drafts目录之中。<br>如果你希望强行预览草稿，需要修改项目根目录的_config文件：</p>
@@ -297,9 +297,24 @@
 <p>可以通过以下命令将草稿变成文章或者网页：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo publish [layout] &lt;filename&gt;</span><br></pre></td></tr></table></figure>
 
+<h1 id="hexo指令"><a href="#hexo指令" class="headerlink" title="hexo指令"></a>hexo指令</h1><p>hexo 指令可以查看官方文档：<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/commands.html">https://hexo.io/zh-cn/docs/commands.html</a> </br><br>这里只记录几个最常用的指令。</br></p>
+<h2 id="init"><a href="#init" class="headerlink" title="init"></a>init</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init [folder]</span><br></pre></td></tr></table></figure>
+<p>新建一个网站。如果没有设置 folder ，Hexo 默认在目前的文件夹建立网站。</p>
+<h2 id="new"><a href="#new" class="headerlink" title="new"></a>new</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure>
+<p>新建一篇文章。如果没有设置 layout 的话，默认使用 _config.yml 中的 default_layout 参数代替。如果标题包含空格的话，请使用引号括起来。</p>
+<h2 id="generate"><a href="#generate" class="headerlink" title="generate"></a>generate</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>生成静态文件,保存在项目的public文件夹中。<br>该命令也能简写为：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g</span><br></pre></td></tr></table></figure>
 
-
-
+<h2 id="publish"><a href="#publish" class="headerlink" title="publish"></a>publish</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo publish [layout] &lt;filename&gt;</span><br></pre></td></tr></table></figure>
+<p>发表草稿</p>
+<h2 id="server"><a href="#server" class="headerlink" title="server"></a>server</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>启动服务器。默认情况下，访问网址为： <a target="_blank" rel="noopener" href="http://localhost:4000/%E3%80%82">http://localhost:4000/。</a></p>
+<h2 id="deploy"><a href="#deploy" class="headerlink" title="deploy"></a>deploy</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>部署网站,可以将网站部署到github上。</p>
+<h2 id="clean"><a href="#clean" class="headerlink" title="clean"></a>clean</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
+<p>清除缓存文件 (db.json) 和已生成的静态文件 (public)。</p>
+<p>在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。</p>
 
     
 
