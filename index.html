@@ -244,13 +244,41 @@
 <h2 id="安装git和gitcore"><a href="#安装git和gitcore" class="headerlink" title="安装git和gitcore"></a>安装git和gitcore</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install git</span><br><span class="line">$ sudo apt-get install git-core</span><br></pre></td></tr></table></figure>
 <br>
 
-<h2 id="设置本机git账号"><a href="#设置本机git账号" class="headerlink" title="设置本机git账号"></a>设置本机git账号</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;yourname&quot;</span><br><span class="line">git config --global user.email &quot;youremail&quot;   #注册github账户使用的邮箱</span><br></pre></td></tr></table></figure>
+<h2 id="设置本机git账号"><a href="#设置本机git账号" class="headerlink" title="设置本机git账号"></a>设置本机git账号</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name &quot;yourname&quot;</span><br><span class="line">$ git config --global user.email &quot;youremail&quot;   #注册github账户使用的邮箱</span><br></pre></td></tr></table></figure>
 
-<h2 id="生成密钥"><a href="#生成密钥" class="headerlink" title="生成密钥"></a>生成密钥</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;youremail&quot;</span><br></pre></td></tr></table></figure>
+<h2 id="生成密钥"><a href="#生成密钥" class="headerlink" title="生成密钥"></a>生成密钥</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C &quot;youremail&quot;</span><br></pre></td></tr></table></figure>
 <p>执行后生成密钥文件，密钥保存在~/.ssh/目录下,id_rsa文件为你的私钥，id_rsa.pub为你的公钥：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── id_rsa</span><br><span class="line">├── id_rsa.pub</span><br><span class="line">└── known_hosts</span><br></pre></td></tr></table></figure>
 
-<h2 id="设置SSH-keys"><a href="#设置SSH-keys" class="headerlink" title="设置SSH keys"></a>设置SSH keys</h2><p>在github中点击自己的头像，然后点击settings进入设置界面。<br>在左侧找到并点击“SSH and GPG keys”，然后点击右侧的“New SSH key”。</p>
+<h2 id="设置SSH-keys"><a href="#设置SSH-keys" class="headerlink" title="设置SSH keys"></a>设置SSH keys</h2><p>在github中点击自己的头像，然后点击settings进入设置界面。</p>
+<img src="/2021/11/19/Hexo-%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA(2)/SSH_key.jpg" class title="SSH_KEY">
+<p>在左侧找到并点击“SSH and GPG keys”，然后点击右侧的“New SSH key”。<br><br></p>
+<img src="/2021/11/19/Hexo-%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA(2)/add_key.jpg" class title="添加一个新的密钥">
+
+<p>title中可以输入自定义的名称，Key中需要输入~/.ssh/id_rsa.pub文件中的信息。输入完成后点击下面的Add SSH key即完成SSH keys的设置。</p>
+<p>我们可以在终端中输入以下指令查看是否设置成功：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+<p>如果有类似以下的信息则表示设置成功</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hi MINAMISAMA! You&#x27;ve successfully authenticated, but GitHub does not provide shell access. </span><br></pre></td></tr></table></figure>
+
+<h2 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h2><img src="/2021/11/19/Hexo-%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA(2)/new_repositories.jpg" class title="创建新仓库">
+<p>在github中点击自己的头像，然后点击Your Repositories进入仓库的编辑页面。然后点击“New”创建新的仓库。</p>
+<img src="/2021/11/19/Hexo-%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA(2)/create_repositories.jpg" class title="创建新仓库">
+<p>创建新仓库时需要将仓库名称设置为“name/github.io”，其中name为你自己的github账户名称，由于笔者已经创建了一个同名的仓库，所以图片显示名称错误。<br><br>然后需要将此仓库设置为公开的（public），最后点击Create完成创建。</p>
+<h2 id="同步远程仓库"><a href="#同步远程仓库" class="headerlink" title="同步远程仓库"></a>同步远程仓库</h2><p>在网站项目的目录下执行以下几行命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git init  #初始化git环境</span><br><span class="line">git remote add origin git@github.com:yourName/yourRepo.git  #后面的仓库改为自己的仓库名称</span><br></pre></td></tr></table></figure>
+<p>输入以上命令后需要按照终端上的指示输入自己的github用户名称和邮箱。</p>
+<h1 id="Hexo部署"><a href="#Hexo部署" class="headerlink" title="Hexo部署"></a>Hexo部署</h1><p>笔者几年前的博客由于没有进行源码备份，更换电脑后已经没办法再去编辑了为了防止再次丢失自己的文章，我们可以将源码上传到github上。<br>由于hexo部署时在github上保存的只有网站的静态文件，为了可以同时实现源码的备份，我们可以通过分支的方式同时在一个项目中同时存放静态文件和源码。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b Hexo</span><br></pre></td></tr></table></figure>
+<p>创建一个新的分支“Hexo”<br>然后编辑网站的根目录下的_config.yml文件，将末尾修改为：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">type: git</span><br><span class="line">repo: https://github.com/YourgithubName/YourgithubName.github.io.git</span><br><span class="line">branch: master</span><br></pre></td></tr></table></figure>
+<p>repo中输入你的仓库地址，branch中指定你网址的静态文件存放的位置。<br>branch也可以设置为Hexo，但是这样就需要你将默认分支设置为Hexo，并且源码要上传到master分支。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<p>安装部署命令</p>
+<p>最后输入以下指令即可完成部署：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<p>部署完成后可以在浏览器中输入YourgithubName.github.io访问你的博客了。</p>
 
     
 
