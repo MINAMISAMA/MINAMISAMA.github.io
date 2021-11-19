@@ -22,7 +22,7 @@
 <meta property="og:image" content="https://minamisama.github.io/2021/11/19/V2ray%E6%90%AD%E5%BB%BA/bwg_user.jpg">
 <meta property="og:image" content="https://minamisama.github.io/2021/11/19/V2ray%E6%90%AD%E5%BB%BA/bwg_login.jpg">
 <meta property="article:published_time" content="2021-11-19T14:12:32.000Z">
-<meta property="article:modified_time" content="2021-11-19T15:23:03.348Z">
+<meta property="article:modified_time" content="2021-11-19T15:52:35.138Z">
 <meta property="article:author" content="Minami">
 <meta property="article:tag" content="教程">
 <meta property="article:tag" content="科学上网">
@@ -248,7 +248,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">444字</span>
+      <span class="post-count">781字</span>
     </span>
   </span>
 
@@ -257,7 +257,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">1分</span>
+      <span class="post-count">3分</span>
     </span>
   </span>
 </div>
@@ -280,15 +280,32 @@
 <p>安装并启动Xshell,然后点击文件-&gt;新建<br></p>
 
 
-<p>名称可以填写任意名称<br><br>协议选择SSH<br><br>主机填写服务器的IP地址<br><br>端口填写服务器的端口号<br><br><br><br><br></p>
+<p>名称可以填写任意名称、协议选择SSH、主机填写服务器的IP地址、端口填写服务器的端口号<br><br></p>
 <img src="/2021/11/19/V2ray%E6%90%AD%E5%BB%BA/bwg_user.jpg" class title="设置账号密码">
 
 <p>点击左侧的用户身份验证，用户名为“root”（注意不是主机名称），密码为服务器密码，方法设置为password。<br><br>设置完成后点击确定，然后可以双击会话登录到自己的服务器了。</p>
 <img src="/2021/11/19/V2ray%E6%90%AD%E5%BB%BA/bwg_login.jpg" class title="登入服务器">
 
 <p>看到终端中的用户名变成服务器的名称代表我们成功登入服务器了。</p>
-<h1 id="V2Ray搭建"><a href="#V2Ray搭建" class="headerlink" title="V2Ray搭建"></a>V2Ray搭建</h1><h2 id="安装wget"><a href="#安装wget" class="headerlink" title="安装wget"></a>安装wget</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo yum -y install wget</span><br></pre></td></tr></table></figure>
+<h1 id="V2Ray安装"><a href="#V2Ray安装" class="headerlink" title="V2Ray安装"></a>V2Ray安装</h1><h2 id="安装wget"><a href="#安装wget" class="headerlink" title="安装wget"></a>安装wget</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo yum -y install wget</span><br></pre></td></tr></table></figure>
 
+<h2 id="安装unzip"><a href="#安装unzip" class="headerlink" title="安装unzip"></a>安装unzip</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo yum -y install zip unzip</span><br></pre></td></tr></table></figure>
+
+<h2 id="安装V2Ray"><a href="#安装V2Ray" class="headerlink" title="安装V2Ray"></a>安装V2Ray</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash &lt;(curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh)</span><br></pre></td></tr></table></figure>
+
+<h1 id="V2Ray配置"><a href="#V2Ray配置" class="headerlink" title="V2Ray配置"></a>V2Ray配置</h1><h2 id="获取用户id："><a href="#获取用户id：" class="headerlink" title="获取用户id："></a>获取用户id：</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cat /proc/sys/kernel/random/uuid</span><br></pre></td></tr></table></figure>
+<p>运行这个命令会在终端打印出一串uuid，我们记住这个uuid。</p>
+<h2 id="配置config-json"><a href="#配置config-json" class="headerlink" title="配置config.json"></a>配置config.json</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vi /usr/local/etc/v2ray/config.json</span><br></pre></td></tr></table></figure>
+<p>编辑V2Ray的配置文件，如果服务器没有vim编辑器，执行该指令安装：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ yum install vim</span><br></pre></td></tr></table></figure>
+<p>将以下信息复制到config.json中，使用xshell可以直接将数据带格式复制到vim编辑器中，非常方便。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;inbounds&quot;: [&#123;</span><br><span class="line">    &quot;port&quot;: 2088,</span><br><span class="line">    &quot;protocol&quot;: &quot;vmess&quot;,</span><br><span class="line">    &quot;settings&quot;: &#123;</span><br><span class="line">      &quot;clients&quot;: [</span><br><span class="line">        &#123;</span><br><span class="line">          &quot;id&quot;: &quot;uuid&quot;,</span><br><span class="line">          &quot;level&quot;: 1,</span><br><span class="line">          &quot;alterId&quot;: 64</span><br><span class="line">        &#125;</span><br><span class="line">      ]</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;],</span><br><span class="line">  &quot;outbounds&quot;: [&#123;</span><br><span class="line">    &quot;protocol&quot;: &quot;freedom&quot;,</span><br><span class="line">    &quot;settings&quot;: &#123;&#125;</span><br><span class="line">  &#125;,&#123;</span><br><span class="line">    &quot;protocol&quot;: &quot;blackhole&quot;,</span><br><span class="line">    &quot;settings&quot;: &#123;&#125;,</span><br><span class="line">    &quot;tag&quot;: &quot;blocked&quot;</span><br><span class="line">  &#125;],</span><br><span class="line">  &quot;routing&quot;: &#123;</span><br><span class="line">    &quot;rules&quot;: [</span><br><span class="line">      &#123;</span><br><span class="line">        &quot;type&quot;: &quot;field&quot;,</span><br><span class="line">        &quot;ip&quot;: [&quot;geoip:private&quot;],</span><br><span class="line">        &quot;outboundTag&quot;: &quot;blocked&quot;</span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>需要注意“port”的值需要记录一下，会在客户端设置时用到。<br>另外需要将上一步中获取的uuid填写到“uuid”位置中。<br><br>配置完成后保存即可。</p>
+<h2 id="相关命令"><a href="#相关命令" class="headerlink" title="相关命令"></a>相关命令</h2><p>执行下面的命令手动启动V2Ray</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo systemctl start v2ray</span><br></pre></td></tr></table></figure>
+
+<p>其他命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ sudo systemctl stop v2ray  # 停止</span><br><span class="line">$ sudo systemctl restart v2ray  # 重启</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 
 
