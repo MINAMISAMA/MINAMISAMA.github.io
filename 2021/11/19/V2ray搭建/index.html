@@ -21,8 +21,11 @@
 <meta property="og:image" content="https://minamisama.github.io/2021/11/19/V2ray%E6%90%AD%E5%BB%BA/xshell_new.jpg">
 <meta property="og:image" content="https://minamisama.github.io/2021/11/19/V2ray%E6%90%AD%E5%BB%BA/bwg_user.jpg">
 <meta property="og:image" content="https://minamisama.github.io/2021/11/19/V2ray%E6%90%AD%E5%BB%BA/bwg_login.jpg">
+<meta property="og:image" content="https://minamisama.github.io/2021/11/19/V2ray%E6%90%AD%E5%BB%BA/V2RayN_1.jpg">
+<meta property="og:image" content="https://minamisama.github.io/2021/11/19/V2ray%E6%90%AD%E5%BB%BA/V2RayN_2.jpg">
+<meta property="og:image" content="https://minamisama.github.io/2021/11/19/V2ray%E6%90%AD%E5%BB%BA/V2Ray_setting.jpg">
 <meta property="article:published_time" content="2021-11-19T14:12:32.000Z">
-<meta property="article:modified_time" content="2021-11-19T15:52:35.138Z">
+<meta property="article:modified_time" content="2021-11-19T16:32:54.988Z">
 <meta property="article:author" content="Minami">
 <meta property="article:tag" content="教程">
 <meta property="article:tag" content="科学上网">
@@ -248,7 +251,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">781字</span>
+      <span class="post-count">948字</span>
     </span>
   </span>
 
@@ -280,18 +283,44 @@
 <p>安装并启动Xshell,然后点击文件-&gt;新建<br></p>
 
 
-<p>名称可以填写任意名称、协议选择SSH、主机填写服务器的IP地址、端口填写服务器的端口号<br><br></p>
+<p>名称可以填写任意名称、协议选择SSH、主机填写服务器的IP地址、端口填写服务器的端口号</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>名称</td>
+<td>任意名称</td>
+</tr>
+<tr>
+<td>协议</td>
+<td>SSH</td>
+</tr>
+<tr>
+<td>主机</td>
+<td>服务器的IP地址</td>
+</tr>
+<tr>
+<td>端口</td>
+<td>服务器的端口号</td>
+</tr>
+</tbody></table>
+<br>
 <img src="/2021/11/19/V2ray%E6%90%AD%E5%BB%BA/bwg_user.jpg" class title="设置账号密码">
 
 <p>点击左侧的用户身份验证，用户名为“root”（注意不是主机名称），密码为服务器密码，方法设置为password。<br><br>设置完成后点击确定，然后可以双击会话登录到自己的服务器了。</p>
 <img src="/2021/11/19/V2ray%E6%90%AD%E5%BB%BA/bwg_login.jpg" class title="登入服务器">
 
-<p>看到终端中的用户名变成服务器的名称代表我们成功登入服务器了。</p>
+<p>看到终端中的用户名变成服务器的名称代表我们成功登入服务器了。<br></p>
 <h1 id="V2Ray安装"><a href="#V2Ray安装" class="headerlink" title="V2Ray安装"></a>V2Ray安装</h1><h2 id="安装wget"><a href="#安装wget" class="headerlink" title="安装wget"></a>安装wget</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo yum -y install wget</span><br></pre></td></tr></table></figure>
 
 <h2 id="安装unzip"><a href="#安装unzip" class="headerlink" title="安装unzip"></a>安装unzip</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo yum -y install zip unzip</span><br></pre></td></tr></table></figure>
 
 <h2 id="安装V2Ray"><a href="#安装V2Ray" class="headerlink" title="安装V2Ray"></a>安装V2Ray</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash &lt;(curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh)</span><br></pre></td></tr></table></figure>
+<br>
 
 <h1 id="V2Ray配置"><a href="#V2Ray配置" class="headerlink" title="V2Ray配置"></a>V2Ray配置</h1><h2 id="获取用户id："><a href="#获取用户id：" class="headerlink" title="获取用户id："></a>获取用户id：</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cat /proc/sys/kernel/random/uuid</span><br></pre></td></tr></table></figure>
 <p>运行这个命令会在终端打印出一串uuid，我们记住这个uuid。</p>
@@ -305,12 +334,40 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo systemctl start v2ray</span><br></pre></td></tr></table></figure>
 
 <p>其他命令：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ sudo systemctl stop v2ray  # 停止</span><br><span class="line">$ sudo systemctl restart v2ray  # 重启</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo systemctl stop v2ray  # 停止</span><br><span class="line">$ sudo systemctl restart v2ray  # 重启</span><br></pre></td></tr></table></figure>
 
+<br>
 
+<h1 id="V2Ray客户端配置-–WINDOWS"><a href="#V2Ray客户端配置-–WINDOWS" class="headerlink" title="V2Ray客户端配置 –WINDOWS"></a>V2Ray客户端配置 –WINDOWS</h1><h2 id="下载客户端程序"><a href="#下载客户端程序" class="headerlink" title="下载客户端程序"></a>下载客户端程序</h2><p>在<a target="_blank" rel="noopener" href="https://github.com/2dust/v2rayN/releases">V2RayN Release</a>中可以下载各个版本的客户端软件。我们只要下载V2RayN-Core.zip即可。</p>
+<p>下载并解压文件后，打开V2Ray.exe。</p>
+<img src="/2021/11/19/V2ray%E6%90%AD%E5%BB%BA/V2RayN_1.jpg" class title="V2RayN界面">
 
+<p>点击服务器-&gt;添加VMess服务器</p>
+<img src="/2021/11/19/V2ray%E6%90%AD%E5%BB%BA/V2RayN_2.jpg" class title="添加VMess">
 
-
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>地址</td>
+<td>服务器IP</td>
+</tr>
+<tr>
+<td>端口</td>
+<td>“config.json”中的端口号</td>
+</tr>
+<tr>
+<td>用户ID</td>
+<td>服务器的uuid</td>
+</tr>
+</tbody></table>
+<h2 id="客户端使用"><a href="#客户端使用" class="headerlink" title="客户端使用"></a>客户端使用</h2><img src="/2021/11/19/V2ray%E6%90%AD%E5%BB%BA/V2Ray_setting.jpg" class title="设置">
+<p>鼠标右键点击V2Ray图标-&gt;系统代理-&gt;自动配置系统代理</p>
+<p>V2Ray图标变成红色时表示V2Ray正在工作了。<br><br><br>enjoy yourself~~</p>
 
     
 
