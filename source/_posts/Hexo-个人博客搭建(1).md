@@ -11,11 +11,14 @@ date: 2021-11-18 17:22:43
 
 # 前言
 
-hexo的官网时https://hexo.io/zh-cn
+hexo的官网是https://hexo.io/zh-cn
 官网中有详细的搭建方法，但是在自己的电脑实际使用中会有坑，所以记录一下自己的搭建过程。
-本篇主要记录Hexo博客的安装和基础使用指令。Hexo搭建的系列：
+本篇主要记录Hexo博客的安装和基础使用指令。</br>
+Hexo搭建的系列：
 [Hexo 个人博客搭建（1）](https://minamisama.github.io/2021/11/18/Hexo-%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA(1)/)
 [Hexo 个人博客搭建（2）](https://minamisama.github.io/2021/11/19/Hexo-%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA(2)/)
+
+<!--more-->
 
 # 事前准备
 

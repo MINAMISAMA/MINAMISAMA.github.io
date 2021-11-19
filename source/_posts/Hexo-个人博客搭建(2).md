@@ -8,7 +8,8 @@ categories:
   - Hexo
 date: 2021-11-19 02:23:54
 ---
-本篇记录如何将Hexo博客部署到github上，然后可以通过浏览器直接访问你的博客。Hexo搭建的系列：
+本篇记录如何将Hexo博客部署到github上，然后可以通过浏览器直接访问你的博客。</br>
+Hexo搭建的系列：
 [Hexo 个人博客搭建（1）](https://minamisama.github.io/2021/11/18/Hexo-%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA(1)/)
 [Hexo 个人博客搭建（2）](https://minamisama.github.io/2021/11/19/Hexo-%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA(2)/)
 
