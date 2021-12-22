@@ -26,11 +26,11 @@ VPS 速度：香港线路 > CN2 GIA 线路 > CN2 线路 > 普通线路</br>
 购买了服务器后使用SSH指令即可远程登录你的主机，在window系统下可以使用[XSHELL软件](https://xshell.en.softonic.com/)链接服务器。</br>
 
 {% asset_img xshell_new.jpg 新建会话 %}
+
 安装并启动Xshell,然后点击文件->新建</br>
 
 {% asset_img xshell_config.jpg 配置参数 %}
 
-名称可以填写任意名称、协议选择SSH、主机填写服务器的IP地址、端口填写服务器的端口号
 
 | 属性       | 值               | 
 | ------     | ------          | 
