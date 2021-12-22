@@ -6,16 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://minamisama.github.io">
-  <title>Tag: 科学上网 | Minami</title>
+  <title>apollo6.0-python编程流程.md | Minami</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Minami">
-<meta property="og:url" content="https://minamisama.github.io/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/index.html">
+  <meta name="description" content="Apollo6.0-edu版本python编程在使用apollo6.0时发现python的用法与之前版本有不同，所以记录一下编程以及编译的方法。 系统环境系统环境：Ubuntu 18.04apollo版本：apollo6.0-edu 代码参考 代码参考：12apollo&#x2F;modules&#x2F;tools&#x2F;mock_routing&#x2F;mock_routing_request.pyapollo&#x2F;modules">
+<meta property="og:type" content="article">
+<meta property="og:title" content="apollo6.0-python编程流程.md">
+<meta property="og:url" content="https://minamisama.github.io/2021/12/23/apollo6-0-python%E7%BC%96%E7%A8%8B%E6%B5%81%E7%A8%8B-md/index.html">
 <meta property="og:site_name" content="Minami">
+<meta property="og:description" content="Apollo6.0-edu版本python编程在使用apollo6.0时发现python的用法与之前版本有不同，所以记录一下编程以及编译的方法。 系统环境系统环境：Ubuntu 18.04apollo版本：apollo6.0-edu 代码参考 代码参考：12apollo&#x2F;modules&#x2F;tools&#x2F;mock_routing&#x2F;mock_routing_request.pyapollo&#x2F;modules">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-12-22T17:37:33.000Z">
+<meta property="article:modified_time" content="2021-12-22T17:38:42.051Z">
 <meta property="article:author" content="Minami">
+<meta property="article:tag" content="教程">
+<meta property="article:tag" content="自动驾驶">
+<meta property="article:tag" content="apollo">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Minami" type="application/atom+xml">
@@ -203,41 +210,165 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-apollo6-0-python编程流程-md" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2021/11/19/V2ray%E6%90%AD%E5%BB%BA/" class="archive-article-date">
-        <time datetime="2021-11-19T14:12:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-11-19</time>
-</a>
-
-        </div>
-    	 
+      <header class="article-header">
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2021/11/19/V2ray%E6%90%AD%E5%BB%BA/" target="_blank">V2ray搭建</a>
   
+    <h1 class="article-title" itemprop="name">
+      apollo6.0-python编程流程.md
     </h1>
   
 
 
-        <div class="article-info info-on-right">
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+<a href="/2021/12/23/apollo6-0-python%E7%BC%96%E7%A8%8B%E6%B5%81%E7%A8%8B-md/" class="archive-article-date">
+        <time datetime="2021-12-22T17:37:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-12-23</time>
+</a>
+
+  
+  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">846字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">3分</span>
+    </span>
+  </span>
+</div>
+
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="Apollo6-0-edu版本python编程"><a href="#Apollo6-0-edu版本python编程" class="headerlink" title="Apollo6.0-edu版本python编程"></a>Apollo6.0-edu版本python编程</h1><p>在使用apollo6.0时发现python的用法与之前版本有不同，所以记录一下编程以及编译的方法。</p>
+<h2 id="系统环境"><a href="#系统环境" class="headerlink" title="系统环境"></a>系统环境</h2><p>系统环境：Ubuntu 18.04<br>apollo版本：apollo6.0-edu</p>
+<h2 id="代码参考"><a href="#代码参考" class="headerlink" title="代码参考"></a>代码参考</h2><ul>
+<li>代码参考：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apollo/modules/tools/mock_routing/mock_routing_request.py</span><br><span class="line">apollo/modules/tools/mock_routing/BUILD</span><br></pre></td></tr></table></figure></li>
+<li>参考这个代码可以创建一个cyber节点并且往设定的通道中发送指定信息。</li>
+</ul>
+<h2 id="导入模块："><a href="#导入模块：" class="headerlink" title="导入模块："></a>导入模块：</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">from cyber.python.cyber_py3 import cyber</span><br></pre></td></tr></table></figure>
+<p>apollo中的python库为cyber.python.cyber_py3，核心的类为cyber，python中创建cyber以及创建节点对会调用到这个类。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">from cyber.python.cyber_py3 import cyber_time</span><br></pre></td></tr></table></figure>
+<p>cyber_time类一般是用于设定消息中的timestamp_sec属性的值。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">from modules.routing.proto import routing_pb2</span><br></pre></td></tr></table></figure>
+<p>导入消息的类型，相当于ros中的导入话题/服务类型。消息类型的具体结构可以在proto的定义文件中查看，在本例中导入了modules/routing/proto文件夹中的routing.proto文件</p>
+<h2 id="代码分析"><a href="#代码分析" class="headerlink" title="代码分析"></a>代码分析</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cyber.init()</span><br></pre></td></tr></table></figure>
+<p>cyber.init()用于初始化cyber环境，程序中如果要运行cyber的模块，需要先运行这个初始化。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node = cyber.Node(&quot;mock_routing_requester&quot;)</span><br></pre></td></tr></table></figure>
+<p>创建一个cyber节点，这里属性只是输入一个节点名称。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">routing_request = routing_pb2.RoutingRequest()</span><br></pre></td></tr></table></figure>
+<p>创建一个RoutingRequest消息类型的变量，该消息类型结构可以为：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">message RoutingRequest &#123;</span><br><span class="line">  optional apollo.common.Header header = 1;</span><br><span class="line">  // at least two points. The first is start point, the end is final point.</span><br><span class="line">  // The routing must go through each point in waypoint.</span><br><span class="line">  repeated LaneWaypoint waypoint = 2;</span><br><span class="line">  repeated LaneSegment blacklisted_lane = 3;</span><br><span class="line">  repeated string blacklisted_road = 4;</span><br><span class="line">  optional bool broadcast = 5 [default = true];</span><br><span class="line">  optional apollo.hdmap.ParkingSpace parking_space = 6 [deprecated = true];</span><br><span class="line">  optional ParkingInfo parking_info = 7;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>proto消息的信息可以在routing.proto中查看</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">routing_request.header.timestamp_sec = cyber_time.Time.now().to_sec()</span><br><span class="line">routing_request.header.module_name = &#x27;routing_request&#x27;</span><br><span class="line">routing_request.header.sequence_num = sequence_num</span><br></pre></td></tr></table></figure>
+<p>上面几行是填充header中的数据，其中需要注意时间戳数据的设置方法：cyber_time.Time.now().to_sec()</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">waypoint = routing_request.waypoint.add()</span><br><span class="line">waypoint.pose.x = 587696.82286</span><br><span class="line">waypoint.pose.y = 4141446.66696</span><br><span class="line">waypoint.id = &#x27;1-1&#x27;</span><br><span class="line">waypoint.s = 1</span><br><span class="line"></span><br><span class="line">waypoint = routing_request.waypoint.add()</span><br><span class="line">waypoint.pose.x = 586948.740120</span><br><span class="line">waypoint.pose.y = 4141171.118641</span><br><span class="line">waypoint.id = &#x27;1-1&#x27;</span><br><span class="line">waypoint.s = 80</span><br></pre></td></tr></table></figure>
+<p>由于waypoint是repeated类型（可以在routing.proto中看到）所以waypoint可以有多个数据，所以在创建waypoint时使用了add()方法。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">writer = node.create_writer(&#x27;/apollo/routing_request&#x27;,</span><br><span class="line">                            routing_pb2.RoutingRequest)</span><br></pre></td></tr></table></figure>
+<p>这里调用了节点中的create_writer方法创建一个“发布者”，数据写入的通道为“/apollo/routing_request”，数据的类型为routing_pb2.RoutingRequest。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">writer.write(routing_request)</span><br></pre></td></tr></table></figure>
+<p>最后调用发布者的write方法将数据接入到通道中。</p>
+<h2 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h2><p>程序写完后会发现直接运行python mock_routing_request.py会报错，这是因为python的环境中没有配置cyber_py的库，需要按照规定的方式编译cyber系统。cyber系统使用bazel项目编译工具进行编译，编译前需要在项目文件夹中创建一个BUILD文件。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">load(&quot;@rules_python//python:defs.bzl&quot;, &quot;py_binary&quot;)</span><br></pre></td></tr></table></figure>
+<p>加载bazel中的python编译规则</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">package(default_visibility = [&quot;//visibility:public&quot;])</span><br></pre></td></tr></table></figure>
+<p>设置功能包为开放的</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">py_binary(</span><br><span class="line">name = &quot;mock_routing_request&quot;,</span><br><span class="line">srcs = [&quot;mock_routing_request.py&quot;],</span><br><span class="line">deps = [</span><br><span class="line">    &quot;//cyber/python/cyber_py3:cyber&quot;,</span><br><span class="line">    &quot;//cyber/python/cyber_py3:cyber_time&quot;,</span><br><span class="line">    &quot;//modules/routing/proto:routing_py_pb2&quot;,</span><br><span class="line">],)</span><br></pre></td></tr></table></figure>
+<p>设置程序名称、源文件、依赖即可。</p>
+<p>最后进入到apollo的docker系统中，输入命令编译即可：<br>  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bazel build //path/to:my_demo</span><br></pre></td></tr></table></figure><br>对于本例输入的命令为：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">只进行编译</span><br><span class="line">bazel build modules/tools/mock_routing:mock_routing_request</span><br></pre></td></tr></table></figure>
+<p>或</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">编译后运行程序</span><br><span class="line">bazel run modules/tools/mock_routing:mock_routing_request</span><br></pre></td></tr></table></figure>
+
+<h2 id="运行程序"><a href="#运行程序" class="headerlink" title="运行程序"></a>运行程序</h2><p>运行程序方法为：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./bazel-bin/path/to/my_demo</span><br></pre></td></tr></table></figure>
+<p>在本例中输入的命令为：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./bazel-bin/modules/tools/mock_routing/mock_routing_request</span><br></pre></td></tr></table></figure>
+    
+
+    
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/alipay.jpg">
+                    <span class="reward-type">支付宝</span>
+                  </div>
+                  
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/weixin.png">
+                    <span class="reward-type">微信</span>
+                  </div>
+                  
+                </div>
+              </span>
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          Minami
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="https://minamisama.github.io/2021/12/23/apollo6-0-python编程流程-md/" title="apollo6.0-python编程流程.md" target="_blank">https://minamisama.github.io/2021/12/23/apollo6-0-python编程流程-md/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
           
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -247,29 +378,138 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">科学上网</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">自动驾驶</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">服务器</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">apollo</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+    
 
     
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://minamisama.github.io/2021/12/23/apollo6-0-python%E7%BC%96%E7%A8%8B%E6%B5%81%E7%A8%8B-md/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2021/11/25/%E5%B7%A5%E5%85%B7%E5%90%88%E9%9B%86/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">工具合集</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+<section id="comments">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname =
+    'true'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+  </script>
+  <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by
+      Disqus.</a></noscript>
+</section>
+
+
+
+
+
+
 
 
           </div>
@@ -310,9 +550,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,
