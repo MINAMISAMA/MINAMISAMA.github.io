@@ -14,3 +14,14 @@ tags:
 <!-- more -->
 
 # 设备类型
+在linux系统中，我们可以在/dev中查看接入到系统的所有设备，在这里我们只讨论几个常用的设备类型：ttyUSB、ttyACM、ttyS、video。
+设备的类型与设备的协议以及内置芯片有关，一般摄像头设备类型为video，其他串口类或USB设备会被识别为ttyUSB、ttyACM、ttyS类型。
+
+想要了解设备类型的区别可以点击此链接：[/dev/ttyUSB 和 /dev/ttyACM的区别？](https://zhuanlan.zhihu.com/p/392491394)
+
+# 绑定设备号
+
+TODO 需要先弄清楚ttyACM和ttyS是否可以通过lsusb来获取设备号
+
+# 绑定端口号
+
